@@ -9,10 +9,9 @@ _The technologies used are:_
 
 * [Astro](https://astro.build)
 * [Tailwind CSS](https://tailwindcss.com) 
-* Javascript.
+* [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ## Author ✒️
-_Dev by_
 * **Tomas Martinez** 
 
 
