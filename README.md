@@ -1,4 +1,4 @@
-# Web Portfolio
+# Web Portfolio 🚀
 
 Simple web application used as a portfolio to show all my projects. 
 
