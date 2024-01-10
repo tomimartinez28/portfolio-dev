@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/Layout.astro";
+import LinkedinIcon from "../icons/LinkedinIcon.astro"
+import GitHubIcon from "../icons/GitHubIcon.astro"
+import GmailIcon from "../icons/GmailIcon.astro"
+import Badge from "../components/Badge.astro";
+
+---
+
+<Layout title="Tomas Martinez">
+	<main>
+		<section class="w-full mx-auto lg:w-[840px] py-44">
+			<img
+				class="rounded-full w-20 h-20"
+				src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg"
+				alt="tomidev photo"
+			/>
+			<h1
+				class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-4"
+			>
+				Hi, I'm Tomas Martinez
+				<div class="flex justify-center items-center">
+					<a
+						href="https://www.linkedin.com/in/tomimartinez/"
+						target="_blank"
+						rel="noopener"
+						class="flex justify-center items-center"
+					>
+						<Badge>Available for hire</Badge>
+					</a>
+				</div>
+			</h1>
+
+			<h2 class="text-2xl opacity-100 text-wrapper">
+				<span class="text-yellow-300 opacity-85">Web Developer</span> and
+				<span class="text-yellow-300 opacity-85"
+					>Programming Teacher.</span
+				> From Argentina.
+			</h2>
+
+			<ul class="flex gap-5 mt-6">
+				<li>
+					<a href="https://www.linkedin.com/in/tomimartinez/" target="_blank">
+						<LinkedinIcon class="w-8 h-8" />
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/tomimartinez/" target="_blank">
+						<GitHubIcon class="w-8 h-8" />
+					</a>
+				</li>
+
+				<li>
+					<a href="tomasagustinmartinez28@gmail.com" target="_blank">
+						<GmailIcon class="w-8 h-8" />
+					</a>
+				</li>
+			</ul>
+
+		</section>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1rem;
+		width: 100%;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		margin-bottom: 2rem;
+		border: 1px solid rgba(var(--accent-light), 25%);
+		background: linear-gradient(
+			rgba(var(--accent-dark), 66%),
+			rgba(var(--accent-dark), 33%)
+		);
+		padding: 1.5rem;
+		border-radius: 8px;
+	}
+	.instructions code {
+		font-size: 0.8em;
+		font-weight: bold;
+		background: rgba(var(--accent-light), 12%);
+		color: rgb(var(--accent-light));
+		border-radius: 4px;
+		padding: 0.3em 0.4em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent-light));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 2rem;
+		padding: 0;
+	}
+</style>
