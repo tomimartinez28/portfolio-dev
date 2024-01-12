@@ -7,7 +7,9 @@ import ResumeIcon from "../icons/ResumeIcon.astro";
 import SocialPill from "../icons/SocialPill.astro";
 import Badge from "../components/Badge.astro";
 import Experience from "../components/Experience.astro";
+import ProjectsIcon from "../icons/ProjectsIcon.astro"
 import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 import SuitcaseIcon from "../icons/SuitcaseIcon.astro";
 ---
 
@@ -16,7 +18,7 @@ import SuitcaseIcon from "../icons/SuitcaseIcon.astro";
 	description="Hire Tomi to develop your web application. Web developer and programming teacher."
 >
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-32">
+		<SectionContainer class="py-32 pb-24">
 			<img
 				class="rounded-full size-20"
 				src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/1200px-Cat_November_2010-1a.jpg"
@@ -38,101 +40,51 @@ import SuitcaseIcon from "../icons/SuitcaseIcon.astro";
 				</div>
 			</h1>
 
-			<h2 class="text-2xl opacity-100 text-wrapper">
+			<h2 class="text-xl lg:text-2xl text-balance max-w-[700px] text-black dark:text-white">
 				<span class="text-yellow-300 opacity-85">Web Developer</span> and
 				<span class="text-yellow-300 opacity-85"
 					>Programming Teacher.</span
 				> From Argentina.
 			</h2>
 
-			<nav class="flex gap-x-4 mt-7">
+			<nav class="flex gap-4 mt-7 flex-wrap">
 				<SocialPill href="https://www.linkedin.com/in/tomimartinez/">
-					<LinkedinIcon class="size-4" />
+					<LinkedinIcon class="size-4 md:size-6" />
 					Linkedin
 				</SocialPill>
 
 				<SocialPill href="https://github.com/tomimartinez28">
-					<GitHubIcon class="size-4" />
+					<GitHubIcon class="size-4 md:size-6" />
 					GitHub
 				</SocialPill>
 				<SocialPill href="mailto:tomasagustinmartinez28@gmail.com">
-					<GmailIcon class="size-4"/>
+					<GmailIcon class="size-4 md:size-6"/>
 					Email Me
 				</SocialPill>
 				<SocialPill href="/Users/tomasmartinez/Documents/PROJECTS/portfolio-astro/portfolio-dev/src/files/cv.pdf" download="cv.pdf">
-					<ResumeIcon class="size-4"/>
+					<ResumeIcon class="size-4 md:size-6"/>
 					Download Resume
 				</SocialPill>
 			</nav>
 		</SectionContainer>
 		
-		<SectionContainer id='experience'>
+		<SectionContainer class="py-32 pb-24" id='experience'>
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<SuitcaseIcon class="size-7"/>
 				Experience
 			</h2>
 			<Experience/>
 		</SectionContainer>
+
+
+		<SectionContainer class="py-32 pb-24" id='projects'>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<ProjectsIcon class="size-7"/>
+				Projects
+			</h2>
+			<Projects />
+		</SectionContainer>
 	</main>
 </Layout>
 
-<style>
-	main {
-		margin: auto;
-		padding: 1rem;
-		width: 100%;
-		max-width: calc(100% - 2rem);
-		color: white;
-		font-size: 20px;
-		line-height: 1.6;
-	}
-	.astro-a {
-		position: absolute;
-		top: -32px;
-		left: 50%;
-		transform: translatex(-50%);
-		width: 220px;
-		height: auto;
-		z-index: -1;
-	}
-	h1 {
-		font-size: 4rem;
-		font-weight: 700;
-		line-height: 1;
-		text-align: center;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		margin-bottom: 2rem;
-		border: 1px solid rgba(var(--accent-light), 25%);
-		background: linear-gradient(
-			rgba(var(--accent-dark), 66%),
-			rgba(var(--accent-dark), 33%)
-		);
-		padding: 1.5rem;
-		border-radius: 8px;
-	}
-	.instructions code {
-		font-size: 0.8em;
-		font-weight: bold;
-		background: rgba(var(--accent-light), 12%);
-		color: rgb(var(--accent-light));
-		border-radius: 4px;
-		padding: 0.3em 0.4em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent-light));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 2rem;
-		padding: 0;
-	}
-</style>
+
