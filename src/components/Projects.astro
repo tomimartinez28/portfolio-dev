@@ -1,4 +1,18 @@
 ---
+import PythonIcon from "../icons/PythonIcon.astro";
+import DjangoIcon from "../icons/DjangoIcon.astro";
+
+const TAGS = {
+    PYTHON: {
+        name: "Python",
+        icon: PythonIcon,
+    },
+    DJANGO: {
+        name: "Django",
+        icon: DjangoIcon,
+    },
+};
+
 const PROJECTS = [
     {
         title: "Projects 1",
@@ -7,22 +21,35 @@ const PROJECTS = [
         link: "#",
         github: "#",
         image: "/projects/svgl.webp",
-        tags: ["Django", "Python"],
+        tags: [TAGS.DJANGO, TAGS.PYTHON],
     },
 ];
 ---
 
 {
-    PROJECTS.map(({title, description, tags, github, image, link}) => (
+    PROJECTS.map(({ title, description, tags, github, image, link }) => (
         <article class="">
-            <h3 class="text-2xl font-semibold text-yellow-300/85 mt-2">{title}</h3>
-            <p class="text-lg mb-4 text-pretty">{description}</p>
-            <ul class="">
+            <h3 class="text-lg font-semibold text-yellow-300/85 mt-2">
+                {title}
+            </h3>
+            <p class="text-base font-normal  dark:text-gray-200 text-pretty mb-4">{description}</p>
+            <ul class="flex flex-row gap-x-4 mb-2">
                 {tags.map((tag) => (
-                    <li>{tag}</li>
+                    <li>
+                        <span
+                            class={`flex gap-x-2 mb-2 rounded-full text-xs py-1 px-2 border border-white/30 bg-black text-white/80`}
+                        >
+                            <tag.icon class="size-4"/>
+                            {tag.name}
+                        </span>
+                    </li>
                 ))}
             </ul>
-            <img class="rounded shadow-2xl shadow-white/10" src={image} alt="Captura de pantalla del proyecto">
+            <img
+                class="rounded shadow-2xl shadow-white/10"
+                src={image}
+                alt="Captura de pantalla del proyecto"
+            />
         </article>
     ))
 }
